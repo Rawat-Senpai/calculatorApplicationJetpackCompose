@@ -264,16 +264,7 @@ fun Calculator(
 
                 )
 
-
-                CalculatorButton(symbol = "x", modifier = Modifier
-                    .background(Orange)
-                    .aspectRatio(1f)
-                    .weight(1f),
-                    onClick = {
-                        onAction(CalculatorAction.Operation(CalculatorOperation.Multiply))
-                    }
-
-                )
+ 
                 
             }
 
