@@ -19,7 +19,6 @@ class MainActivity : ComponentActivity() {
                 // A surface container using the 'background' color from the theme
                 val viewModel = viewModel<CalculatorViewModel>()
                 val state = viewModel.state
-
                 val buttonSpacing = 8.dp
 
                 Calculator(

@@ -58,7 +58,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Clear)
                     }
-
                 )
 
                 CalculatorButton(symbol = "Del", modifier = Modifier
@@ -68,8 +67,8 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Delete)
                     }
-
                 )
+
                 CalculatorButton(symbol = "/", modifier = Modifier
                     .background(Color.Yellow)
                     .aspectRatio(1f)
@@ -77,9 +76,7 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Operation(CalculatorOperation.Divide))
                     }
-
                 )
-
 
             }
 
@@ -194,7 +191,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Number(3))
                     }
-
                 )
 
 
@@ -205,7 +201,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Number(2))
                     }
-
                 )
 
 
@@ -216,7 +211,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Number(1))
                     }
-
                 )
 
 
@@ -227,7 +221,6 @@ fun Calculator(
                     onClick = {
                         onAction(CalculatorAction.Operation(CalculatorOperation.Add))
                     }
-
                 )
 
 
