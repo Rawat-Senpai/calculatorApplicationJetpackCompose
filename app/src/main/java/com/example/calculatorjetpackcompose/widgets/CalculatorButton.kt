@@ -1,4 +1,4 @@
-package com.example.calculatorjetpackcompose
+package com.example.calculatorjetpackcompose.widgets
 
 import android.provider.CalendarContract.Colors
 import androidx.compose.foundation.clickable

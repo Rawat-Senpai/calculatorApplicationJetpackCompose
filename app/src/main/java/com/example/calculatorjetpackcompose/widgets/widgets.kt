@@ -48,29 +48,4 @@ fun AutoResizingText(
 }
 
 
-@Composable
-fun ScrollableText(
-    text: String,
-    modifier: Modifier = Modifier,
-    fontSize: TextUnit = 80.sp
-) {
-    val scrollState = rememberScrollState()
-
-    Box(
-        modifier = Modifier
-            .horizontalScroll(scrollState)
-            .fillMaxWidth()
-    ) {
-        Text(
-            text = text,
-            fontSize = fontSize,
-            textAlign = TextAlign.End,
-            modifier = modifier
-                .padding(vertical = 32.dp),
-            color = Color.White,
-            maxLines = 1,
-            overflow = TextOverflow.Clip
-        )
-    }
-}
 
