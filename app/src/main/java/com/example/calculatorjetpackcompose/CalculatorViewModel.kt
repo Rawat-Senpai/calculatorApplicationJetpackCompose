@@ -30,24 +30,38 @@ class CalculatorViewModel:ViewModel() {
 
 
     private fun enterDecimal() {
-            if(state.operation == null && !state.number1.contains(".")
-                && state.number1.isNotBlank()
-                ){
-                state= state.copy(
-                    number1 = state.number1 +"."
-                )
-                return
+
+            if(state.operation == null){
+
+                // Handle decimal for number1
+                if (state.number1.isBlank()) {
+                    // If number1 is empty, start with "0."
+                    state = state.copy(
+                        number1 = "0."
+                    )
+                } else if (!state.number1.contains(".")) {
+                    // If number1 already has digits, append "."
+                    state = state.copy(
+                        number1 = state.number1 + "."
+                    )
+                }
+            }else{
+                // Handle decimal for number2
+                if (state.number2.isBlank()) {
+                    // If number2 is empty, start with "0."
+                    state = state.copy(
+                        number2 = "0."
+                    )
+                } else if (!state.number2.contains(".")) {
+                    // If number2 already has digits, append "."
+                    state = state.copy(
+                        number2 = state.number2 + "."
+                    )
+                }
+
             }
 
-            if(!state.number2.contains(".")
-                && state.number2.isNotBlank())
-            {
-                state = state.copy(
-                    number2 = state.number2 +"."
-                )
-                return
 
-            }
 
 
     }
@@ -63,7 +77,7 @@ class CalculatorViewModel:ViewModel() {
     private fun performDeletion() {
 
         when{
-            state.number2.isNotBlank() && !state.number2.contains(".") -> state = state.copy(
+            state.number2.isNotBlank() -> state = state.copy(
                 number2 = state.number2.dropLast(1)
             )
 
@@ -71,7 +85,7 @@ class CalculatorViewModel:ViewModel() {
                 operation = null
             )
 
-            state.number1.isNotBlank()  && !state.number2.contains(".")-> state = state.copy(
+            state.number1.isNotBlank() -> state = state.copy(
                 number1 =  state.number1.dropLast(1)
             )
 
